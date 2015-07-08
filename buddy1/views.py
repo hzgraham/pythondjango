@@ -11,7 +11,7 @@ def index(request):
     hostname = os.getenv('HOSTNAME', 'unknown')
     PageView.objects.create(hostname=hostname)
 
-    return render(request, 'test/index.html', {
+    return render(request, 'buddy1/index.html', {
         'hostname': hostname,
         'database': database.info(),
         'count': PageView.objects.count()
